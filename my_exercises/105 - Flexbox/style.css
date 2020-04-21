@@ -1,0 +1,28 @@
+.main {
+    width: 40rem;
+    height: 40rem;
+    background-color: #ccc;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.red {
+    width: 8rem;
+    height: 8rem;
+    background-color: red;
+}
+
+.green {
+    width: 16rem;
+    height: 4rem;
+    background-color: green;
+}
+
+.blue {
+    width: 4rem;
+    height: 16rem;
+    background-color: #0074D9;
+}
