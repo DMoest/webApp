@@ -40,7 +40,7 @@ var github = (function () {
         githubRequest.open("GET", "https://api.github.com/users/DMoest/repos");
         githubRequest.send();
 
-        window.mainContainer.appendChild(window.title);
+        window.mainContainer.appendChild(title);
 
         window.rootElement.appendChild(window.mainContainer);
 
