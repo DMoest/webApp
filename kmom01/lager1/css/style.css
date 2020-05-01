@@ -1,24 +1,33 @@
 :root {
+    /* TEXT */
     --fontSize_p: 1rem;
-    --lineHeight_p: 1.4;
-    --magicNumber_p: 1.4rem; /* 1 * 1.3 = 1.3rem */
+    --fontSize_h1: 2.4rem;
+    --fontSize_h2: 2.2rem;
+    --fontSize_h3: 2rem;
+    --fontSize_h4: 1.8rem;
+    --lineHeight_p: 1.3;
+    --lineHeight_h: 1.5;
+    --paddingBottom_h1: 2.6rem; /* doubble magicNumber */
+    --magicNumber: 1.3rem; /* 1 * 1.3 = 1.3rem */
 
-    --fontSize_h1: 2.2rem;
-    --lineHeight_h1: 1.5;
-    --magicNumber_h1: 3.3rem; /* 2.2 * 1.5 = 3.3rem */
+    /* TIME */
+    --t_time: 0.25s;
 
     /* COLORS */
     --white_complete: #fcfcfc;
     --white: #fcfcfc;
     --black: #050505;
+    --grey: #535353;
     --grey_dark: #232323;
     --grey_veryDark: #161616;
     --primary: #0094a8;
+    --linkColor: #0094a8;
     --positive: #00a84c;
     --negative: #a80000;
     --selected: #ebc000;
 }
 
+/* BASICS */
 html {
     font-family: 'Playfair Display', serif;
     font-size: 100%;
@@ -35,24 +44,41 @@ body {
 h1 {
     font-family: 'Lobster', cursive;
     font-size: var(--fontSize_h1);
-    font-weight: 500;
-    margin-bottom: var(--magicNumber_h1);
+    font-weight: 400;
+    text-align: center;
+    line-height: var(--lineHeight_h);
+    padding-bottom: var(--paddingBottom_h1);
+}
+
+h2,
+h3,
+h4 {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
 }
 
 p {
     font-weight: 300;
     line-height: var(--lineHeight_p);
-    margin-bottom: var(--magicNumber_p);
+    padding-top: 0;
+    padding-bottom: var(--magicNumber);
 }
+
+a {
+    text-decoration: none;
+    transition: all var(--t_time);
+}
+
+/* a:hover {
+    text-decoration: underline;
+    color: var(--linkColor);
+} */
 
 .title {
     text-align: center;
 }
 
-/* p {
-    margin: 8px 10px;
-} */
-
+/* NAVIGATION */
 .bottom-nav {
     position: fixed;
     bottom: 0;
@@ -79,8 +105,14 @@ p {
     padding: 5px;
 }
 
+.active span,
+.active .material-icons {
+    color: var(--primary);
+}
+
+/* CONTAINER */
 .container {
-    padding: 8px 10px;
+    padding: var(--magicNumber) var(--magicNumber) var(--paddingBottom_h1) var(--magicNumber);
 }
 
 .container img {
@@ -90,5 +122,16 @@ p {
 }
 
 .container p:last-child {
-    padding-bottom: 5rem;
+    padding-bottom: var(--paddingBottom_h1);
+}
+
+/* GITHUB */
+.github--links {
+    display: block;
+    text-decoration: none;
+}
+
+.github--links:hover {
+    color: var(--linkColor);
+    text-decoration: underline;
 }

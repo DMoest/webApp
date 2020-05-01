@@ -1,6 +1,6 @@
 /**
  * Webbapplikationer för mobila enheter
- * KMOM01 - SPA Övning
+ * KMOM01 - Lagerappen
  * Daniel Andersson, DAAP19
 */
 

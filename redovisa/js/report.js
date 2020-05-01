@@ -8,11 +8,11 @@
 
 var md = window.markdownit();
 
-var about = (function () {
-    var showAbout = function () {
+var report = (function () {
+    var showReport = function () {
         window.mainContainer.innerHTML = "";
 
-        fetch("markdown/about.md")
+        fetch("markdown/kmom01.md")
             .then(function(response) {
                 return response.text();
             })
@@ -24,6 +24,6 @@ var about = (function () {
     };
 
     return {
-        showAbout: showAbout
+        showReport: showReport
     };
-})(about);
+})(report);

@@ -20,7 +20,7 @@ var about = (function () {
                 window.mainContainer.innerHTML = md.render(result);
             });
 
-        menu.showMenu("assignment");
+        menu.showMenu("school");
     };
 
     return {

@@ -1,6 +1,6 @@
 /**
  * Webbapplikationer för mobila enheter
- * KMOM01 - SPA Övning
+ * KMOM01 - Lagerappen
  * Daniel Andersson, DAAP19
 */
 
@@ -11,10 +11,9 @@ var menu = (function () {
         window.navigation.innerHTML = "";
 
         var navElements = [
-            {name: "Me", class: "person", nav: home.showHome},
-            {name: "Om", class: "school", nav: about.showAbout},
-            {name: "Github", class: "folder", nav: github.showGithub},
-            {name: "Redovisa", class: "assignment", nav: report.showReport}
+            {name: "Hem", class: "home", nav: home.showHome},
+            {name: "Lager", class: "storage", nav: stock.showStock},
+            {name: "Item", class: "info_outline", nav: item.showItem}
         ];
 
         navElements.forEach(function (element) {

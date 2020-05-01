@@ -9,8 +9,7 @@
         <!-- Stylesheet -->
         <link rel="stylesheet" href="css/style.css">
         <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Lobster|Playfair+Display:600,700,800,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Playfair+Display:400,400i|Titillium+Web:600&display=swap" rel="stylesheet">
         <!-- Icons -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -20,11 +19,30 @@
         <div id="root"></div>
 
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
-        <script type="text/javascript" src="menu.js"></script>
-        <script type="text/javascript" src="home.js"></script>
-        <script type="text/javascript" src="about.js"></script>
-        <script type="text/javascript" src="github.js"></script>
-        <script type="text/javascript" src="report.js"></script>
-        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/home.js"></script>
+        <script type="text/javascript" src="js/about.js"></script>
+        <script type="text/javascript" src="js/github.js"></script>
+        <script type="text/javascript" src="js/report.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script src="js/detect-swipe-event.js"></script>
+        <script>
+        /**
+         * Code to test and verify or as default behaviour.
+         */
+        window.detectSwipeEvent(window, function (element, direction) {
+
+            console.log("You swiped on element " + element + " to " + direction + " direction");
+
+            switch (direction)  {
+                case "left":
+                    //window.history.back();
+                    break;
+                case "right":
+                    //window.history.go(1);
+                    break;
+            }
+        });
+        </script>
     </body>
 </html>

@@ -37,25 +37,22 @@ var home = (function () {
 
         window.rootElement.appendChild(window.mainContainer);
 
-        
 
         // --- --- --- FIXA DETTA!!! --- --- ---
-        // var md = window.markdownit();
-        
-        // (function () {
-        //         window.mainContainer.innerHTML = "";
+        var md = window.markdownit();
 
-        //         fetch("markdown/home.md")
-        //             .then(function(response) {
-        //                 return response.text();
-        //             })
-        //             .then(function(result) {
-        //                 window.mainContainer.innerHTML = md.render(result);
-        //             });
-        //     })();
-            // --- --- --- --- --- --- ---
+        (function () {
+            window.mainContainer.innerHTML = "";
 
-
+            fetch("markdown/home.md")
+                .then(function(response) {
+                    return response.text();
+                })
+                .then(function(result) {
+                    window.mainContainer.innerHTML = md.render(result);
+                });
+        })();
+        // --- --- --- --- --- --- ---
 
         menu.showMenu("person");
     };

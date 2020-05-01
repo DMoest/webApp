@@ -1,6 +1,6 @@
 /**
  * Webbapplikationer för mobila enheter
- * KMOM01 - SPA Övning
+ * KMOM01 - Lagerappen
  * Daniel Andersson, DAAP19
 */
 
@@ -14,9 +14,9 @@ var home = (function () {
         var image = document.createElement("img");
 
         title.className = "title";
-        title.textContent = "Daniel Andersson";
-        image.src = "img/me.png";
-        image.alt = "Daniel Andersson";
+        title.textContent = "Lagerappen";
+        image.src = "img/bolts_n_screws.jpg";
+        image.alt = "Warehouse stocks";
 
         var greeting = document.createElement("p");
         var timeOfDayGreeting = "Hej";
@@ -29,7 +29,7 @@ var home = (function () {
         }
 
         greeting.textContent = timeOfDayGreeting +
-            ", jag heter Daniel Andersson och är student i kursen webapp, VT-20.";
+            " och välkommen till lagerappen.";
 
         window.mainContainer.appendChild(title);
         window.mainContainer.appendChild(greeting);
@@ -37,27 +37,7 @@ var home = (function () {
 
         window.rootElement.appendChild(window.mainContainer);
 
-        
-
-        // --- --- --- FIXA DETTA!!! --- --- ---
-        // var md = window.markdownit();
-        
-        // (function () {
-        //         window.mainContainer.innerHTML = "";
-
-        //         fetch("markdown/home.md")
-        //             .then(function(response) {
-        //                 return response.text();
-        //             })
-        //             .then(function(result) {
-        //                 window.mainContainer.innerHTML = md.render(result);
-        //             });
-        //     })();
-            // --- --- --- --- --- --- ---
-
-
-
-        menu.showMenu("person");
+        menu.showMenu("home");
     };
 
     return {

@@ -1,0 +1,38 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Test swipe events</title>
+<style>
+html {
+    height: 100%;
+    background-color: #eee;
+}
+
+body {
+    height: 50%;
+    background-color: #ccc;
+}
+</style>
+
+<body>
+    <p>Try out Swipe events and check in the Console for output.</p>
+</body>
+
+<script src="detect-swipe-event.js"></script>
+<script>
+/**
+ * Code to test and verify or as default behaviour.
+ */
+window.detectSwipeEvent(window, function (element, direction) {
+
+    console.log("You swiped on element " + element + " to " + direction + " direction");
+
+    switch (direction)  {
+        case "left":
+            //window.history.back();
+            break;
+        case "right":
+            //window.history.go(1);
+            break;
+    }
+});
+</script>
