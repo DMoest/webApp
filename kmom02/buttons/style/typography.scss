@@ -1,0 +1,57 @@
+/**
+ * Webbapplikationer för mobila enheter
+ * KMOM02 - Buttonövningen
+ * Daniel Andersson, DAAP19
+ * Module: typography
+*/
+
+html {
+    font-size: $fontSize-base;
+}
+
+body {
+    font-family: $fontFamily-body;
+    font-size: $fontSize-body;
+}
+
+p {
+    font-family: $fontFamily-p;
+    font-weight: $fontWeight-p;
+    padding-bottom: $verticalRythm;
+}
+
+h1 {
+    font-family: $fontFamily-header;
+    font-weight: $fontWeight-header;
+    padding-bottom: 2 * $verticalRythm;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $fontFamily-subHeader;
+    font-weight: $fontWeight-subHeader;
+    padding-bottom: $verticalRythm;
+}
+
+
+
+
+
+// @mixin size($level) {
+//   font-size: map-get($type-scale-large, $level);
+//   @media (max-width: $breakpoint-medium) {
+//      font-size: map-get($type-scale-medium, $level);
+//   }
+//   @media (max-width: $breakpoint-small) {
+//      font-size: map-get($type-scale-small, $level);
+//   }
+// }
+
+// Example
+
+// .title {
+//   @include size(h1);
+// }

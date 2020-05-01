@@ -1,0 +1,21 @@
+/**
+ * Webbapplikationer för mobila enheter
+ * KMOM02 - Buttonövningen
+ * Daniel Andersson, DAAP19
+ * Module: container
+*/
+
+html {
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    color: $color_text;
+    background-color: $color_white;
+}
+
+.container {
+    padding: (2 * $verticalRythm) $verticalRythm;
+}

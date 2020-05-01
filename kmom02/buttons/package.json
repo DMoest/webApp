@@ -1,0 +1,17 @@
+{
+  "name": "buttons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "style": "sass base.scss css/style.css",
+    "style-min": "sass base.scss css/style.min.css --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.26.5"
+  }
+}

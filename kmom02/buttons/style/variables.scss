@@ -1,0 +1,102 @@
+/**
+ * Webbapplikationer för mobila enheter
+ * KMOM02 - Buttonövningen
+ * Daniel Andersson, DAAP19
+ * Module: variables
+*/
+
+/* -- COLORS --- */
+$color_white: #fcfcfc;
+$color_black: rgb(5, 5, 5);
+$color_grey-veryLight: #cecece;
+$color_grey-light: #b1b1b1;
+$color_grey50: #7f7f7f;
+$color_grey: #535353;
+$color_grey-dark: #232323;
+$color_grey-veryDark: #161616;
+
+$color_text: #161616;
+
+$color_primary: #0094a8;
+$color_secondary: #0094a8;
+
+$color_linkColor: #0094a8;
+$color_positive: #00a84c;
+$color_negative: #a80000;
+$color_selected: #ebc000;
+
+/* --- FONTS --- */
+$fontFamily-body: 'Playfair Display', serif;
+$fontFamily-p: $fontFamily-body;
+$fontFamily-header: 'Lobster', cursive;
+$fontFamily-subHeader: 'Titillium Web', sans-serif;
+
+/* --- MODULAR SCALE --- */
+$modularScale: (
+  base: 1em 1140em 12em,
+  ratio: 1.3
+);
+
+/* --- TEXT -> SIZE & WEIGHT --- */
+$fontSize-base: 100%;
+$fontSize-body: 1rem;
+$fontSize-p: $fontSize-body;
+
+$fontSize-h1: 1.912rem;
+$fontSize-h2: 1.616rem;
+$fontSize-h3: 1.471rem;
+$fontSize-h4: 1.3rem;
+$fontSize-h5: 1.243rem;
+$fontSize-h6: 1.132rem;
+
+$fontSize-button: 1.3rem;
+
+$fontWeight-p: 400;
+$fontWeight-header: 400;
+$fontWeight-subHeader: 600;
+
+/* --- RESPONSIVE SCALEs --- */
+$type-scale-large: (
+  h1: 3.911rem,
+  h2: 2.941rem,
+  h3: 2.211rem,
+  h4: 1.663rem,
+  p: 1.25rem
+);
+
+$type-scale-medium: (
+  h1: 3.052rem,
+  h2: 2.441rem,
+  h3: 1.953em,
+  h4: 1.563rem,
+  p: 1.25rem,
+);
+
+$type-scale-small: (
+  h1: 2.686rem,
+  h2: 2.148rem,
+  h3: 1.719rem,
+  h4: 1.375rem,
+  p: 1.1rem
+);
+
+/* --- BASELINE & RYTHEM --- */
+$baseLineHeight: 1.3; /* line height should be around 1.2 - 1.5 (small screen = smaller line heigt | large screen = larger line height) */
+$verticalRythm: $fontSize-p * $baseLineHeight; /* font_size-body * line_heigt = MagicNumber */
+
+
+/* --- PADDINGS & MARGINS --- */
+$padding_p-bottom: 2 * $verticalRythm;
+$padding_h-bottom: 2 * $verticalRythm;
+
+/* --- BORDERS --- */
+$border: 0.05rem solid $color_grey;
+$border-radius: 0.3rem;
+
+/* --- TIME --- */
+$transition-time: 0.3s;
+
+/* --- BREAKPOINTS --- */
+$breakpoint-large: 98em;
+$breakpoint-medium: 75em;
+$breakpoint-small: 45em;
