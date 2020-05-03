@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/**
+ * Webbapplikationer för mobila enheter
+ * Redovisningsappen
+ * Daniel Andersson, DAAP19
+ * Module: base
+*/
+@import 'css/normalize.min.css';
+/**
+ * Webbapplikationer för mobila enheter
+ * Redovisningsappen
+ * Daniel Andersson, DAAP19
+ * Module: variables
+*/
+/* -- COLORS --- */
+/* --- FONTS --- */
+/* --- MODULAR SCALE --- */
+/* --- TEXT -> SIZE & WEIGHT --- */
+/* --- RESPONSIVE SCALEs --- */
+/* --- BASELINE & RYTHEM --- */
+/* line height should be around 1.2 - 1.5 (small screen = smaller line heigt | large screen = larger line height) */
+/* font_size-body * line_heigt = MagicNumber */
+/* --- PADDINGS & MARGINS --- */
+/* --- BORDERS --- */
+/* --- TIME --- */
+/* --- BREAKPOINTS --- */
+/**
+ * Webbapplikationer för mobila enheter
+ * Redovisningsappen
+ * Daniel Andersson, DAAP19
+ * Module: container
+*/
+html {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  color: #161616;
+  background-color: #fcfcfc;
+}
+
+.container {
+  padding: 2.6rem 1.3rem;
+}
+.container p img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+.container p:last-child {
+  padding-bottom: 2.6rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/**
+ * Webbapplikationer för mobila enheter
+ * Redovisningsappen
+ * Daniel Andersson, DAAP19
+ * Module: navigation
+*/
+/* NAVIGATION */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  background-color: #232323;
+}
+.bottom-nav a {
+  cursor: pointer;
+  color: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 5px;
+}
+.bottom-nav a i {
+  color: #fcfcfc;
+  padding: 5px;
+}
+
+/* ACTIVE VIEW */
+.active span,
+.active .material-icons {
+  color: #00b1c9;
+}
+
+.github--links {
+  display: block;
+  text-decoration: none;
+}
+.github--links:hover {
+  color: #0094a8;
+  text-decoration: underline;
+}
+
+/**
+ * Webbapplikationer för mobila enheter
+ * Redovisningsappen
+ * Daniel Andersson, DAAP19
+ * Module: typography
+*/
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+}
+
+p {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  padding-bottom: 1.3rem;
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  font-weight: 400;
+  padding-bottom: 2.6rem;
+  text-align: center;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  padding-bottom: 1.3rem;
+}
+
+.title {
+  text-align: center;
+}
+
+/**
+ * Webbapplikationer för mobila enheter
+ * KMOM02 - Buttonövningen
+ * Daniel Andersson, DAAP19
+ * Module: button
+*/
+.button {
+  /* ---------- BASIC TO EQUAL Firefox & Chrome ---------- */
+  cursor: pointer;
+  color: #333;
+  background-color: #fff;
+  background-image: linear-gradient(#fff, #eee);
+  border: 1px solid #ccc;
+  text-decoration: none;
+  box-sizing: border-box;
+  display: inline-block;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.3rem;
+  /* ---------- TO HERE ---------- */
+  padding: 0.4333333333rem 1.3rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  line-height: 1.3;
+  width: 100%;
+}
+.button:hover {
+  background-color: #ddd;
+  background-image: none;
+}
+.button:active {
+  background-color: #dcdcdc;
+  background-image: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Förenklar för både höger/vänsterhänta användare */
+.full-width-button {
+  width: 100%;
+}
+
+/* FÄRGER */
+.blue-button {
+  color: #fff;
+  background-color: #2049e1;
+  background-image: linear-gradient(#2049e1, #0039d0);
+  border-color: #0029c0;
+}
+.blue-button:hover {
+  background-color: #0029c0;
+  background-image: none;
+}
+.blue-button:active {
+  background-color: #0029c0;
+  background-image: none;
+  box-shadow: inset 0 2px 4px #0019b0;
+}
+
+/*# sourceMappingURL=style.min.css.map */

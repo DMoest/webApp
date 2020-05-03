@@ -1,0 +1,62 @@
+/**
+ * Webbapplikationer för mobila enheter
+ * KMOM02 - Buttonövningen
+ * Daniel Andersson, DAAP19
+ * Module: button
+*/
+
+.button {
+    /* ---------- BASIC TO EQUAL Firefox & Chrome ---------- */
+    cursor: pointer;
+    color: #333;
+    background-color: #fff;
+    background-image: linear-gradient(#fff, #eee);
+    border: 1px solid #ccc;
+    text-decoration: none;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: $fontSize-button;
+    /* ---------- TO HERE ---------- */
+
+    padding: ($verticalRythm / 3) $verticalRythm;
+    text-align: center;
+    border-radius: $border-radius;
+    line-height: $baseLineHeight;
+    width: 100%;
+
+    &:hover {
+        background-color: #ddd;
+        background-image: none;
+    }
+
+    &:active {
+        background-color: #dcdcdc;
+        background-image: none;
+        box-shadow: inset 0 2px 4px rgba(0,0,0,0.15);
+    }
+}
+
+/* Förenklar för både höger/vänsterhänta användare */
+.full-width-button {
+    width: 100%;
+}
+
+/* FÄRGER */
+.blue-button {
+    color: #fff;
+    background-color: #2049e1;
+    background-image: linear-gradient(#2049e1, #0039d0);
+    border-color: #0029c0;
+
+    &:hover {
+        background-color: #0029c0;
+        background-image: none;
+    }
+
+    &:active {
+        background-color: #0029c0;
+        background-image: none;
+        box-shadow: inset 0 2px 4px #0019b0;
+    }
+}

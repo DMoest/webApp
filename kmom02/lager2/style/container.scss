@@ -1,0 +1,42 @@
+/**
+ * Webbapplikationer för mobila enheter
+ * Kmom02 - Lagerappen
+ * Daniel Andersson, DAAP19
+ * Module: container
+*/
+
+html {
+    overflow-x: hidden;
+    background-color: $color_white;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: $color_bg;
+}
+
+.container {
+    padding: $verticalRythm;
+    padding-bottom: (2 * $verticalRythm);
+
+    img {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    p:last-child {
+        padding-bottom: $padding_p-bottom;
+    }
+}
+
+/* GITHUB */
+.github--links {
+    display: block;
+    text-decoration: none;
+    
+    &:hover {
+        color: $color_linkColor;
+        text-decoration: underline;
+    }
+}

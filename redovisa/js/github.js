@@ -1,8 +1,10 @@
 /**
  * Webbapplikationer för mobila enheter
- * KMOM01 - SPA Övning
+ * KMOM02 - Redovisa
  * Daniel Andersson, DAAP19
 */
+
+/* global mainContainer rootElement menu */
 
 "use strict";
 
@@ -33,7 +35,9 @@ var github = (function () {
 
                 menu.showMenu("folder");
             }).catch(function(error) {
-                console.log('The fetch operation failed due to the following error: ', error.message);
+                let errorMessage = "The fetch operation failed due to the following error: ";
+
+                console.log(errorMessage, error.message);
             });
 
         var title = document.createElement("h1");

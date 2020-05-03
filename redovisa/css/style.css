@@ -86,8 +86,7 @@ a {
     overflow: hidden;
     width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-flow: row | nowrap;
     justify-content: space-around;
     background-color: var(--grey_dark);
 }

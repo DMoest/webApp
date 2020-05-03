@@ -1,0 +1,52 @@
+/**
+ * Webbapplikationer för mobila enheter
+ * Redovisningsappen
+ * Daniel Andersson, DAAP19
+ * Module: navigation
+*/
+
+/* NAVIGATION */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    background-color: $color_grey-dark;
+
+    a {
+        cursor: pointer;
+        color: $color_white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 5px;
+
+        i {
+            color: $color_white;
+            padding: 5px;
+        }
+    }
+}
+
+/* ACTIVE VIEW */
+.active {
+
+    span,
+    .material-icons {
+        color: $color_active;
+    }
+}
+
+.github--links {
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+        color: $color_linkColor;
+        text-decoration: underline;
+    }
+}
+

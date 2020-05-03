@@ -8,9 +8,6 @@
 .button {
     /* ---------- BASIC TO EQUAL Firefox & Chrome ---------- */
     cursor: pointer;
-    color: #333;
-    background-color: #fff;
-    background-image: linear-gradient(#fff, #eee);
     border: 1px solid #ccc;
     text-decoration: none;
     box-sizing: border-box;
@@ -21,19 +18,39 @@
 
     padding: ($verticalRythm / 3) $verticalRythm;
     text-align: center;
+    text-transform: uppercase;
     border-radius: $border-radius;
     line-height: $baseLineHeight;
     width: 100%;
 
-    &:hover {
-        background-color: #ddd;
-        background-image: none;
+    &-skeuomorphic {
+        color: #333;
+        background-color: $color_white;
+        background-image: linear-gradient($color_white, $color_grey-veryLight);
+        
+        &:hover {
+            background-color: $color_grey-veryLight;
+            background-image: none;
+        }
+    
+        &:active {
+            background-color: $color_white;
+            background-image: none;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.15);
+        }
     }
 
-    &:active {
-        background-color: #dcdcdc;
-        background-image: none;
-        box-shadow: inset 0 2px 4px rgba(0,0,0,0.15);
+
+    &-flat {
+        color: $color_text;
+        background-color: transparent;
+        border: $border;
+        border-radius: $border-radius-full;
+
+        &:hover {
+            color: $color_white;
+            background-color: $color_primary;
+        }
     }
 }
 

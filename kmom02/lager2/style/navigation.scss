@@ -1,0 +1,40 @@
+/**
+ * Webbapplikationer för mobila enheter
+ * Kmom02 - Lagerappen
+ * Daniel Andersson, DAAP19
+ * Module: navigation
+*/
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background-color: $color_grey-dark;
+
+    a {
+        cursor: pointer;
+        color: $color_white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 5px;s
+
+        i {
+            color: $color_white;
+            padding: 5px;
+        }
+    }
+}
+
+.active {
+
+    span,
+    .material-icons {
+        color: $color_active;
+    }
+}

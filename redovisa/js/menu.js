@@ -1,8 +1,10 @@
 /**
  * Webbapplikationer för mobila enheter
- * KMOM01 - SPA Övning
+ * KMOM02 - Redovisa
  * Daniel Andersson, DAAP19
 */
+
+/* global home about github report */
 
 "use strict";
 

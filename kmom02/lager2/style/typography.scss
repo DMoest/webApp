@@ -1,0 +1,48 @@
+/**
+ * Webbapplikationer för mobila enheter
+ * Kmom02 - Lagerappen
+ * Daniel Andersson, DAAP19
+ * Module: typography
+*/
+
+
+html {
+    font-family: 'Playfair Display', serif;
+    font-size: 100%;
+}
+
+body {
+    font-size: $fontSize-body;
+    line-height: $baseLineHeight;
+    color: $color_text;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: $fontSize-h1;
+    font-weight: $fontWeight-header;
+    padding-bottom: $padding_h-bottom;
+}
+
+h2,
+h3,
+h4 {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: $fontWeight-subHeader;
+}
+
+p {
+    font-weight: $fontWeight-p;
+    padding-top: 0;
+    padding-bottom: $verticalRythm;
+}
+
+a {
+    text-decoration: none;
+    transition: all $transition-time;
+}
+
+.title {
+    text-align: center;
+}
