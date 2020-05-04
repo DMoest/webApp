@@ -8,10 +8,12 @@
 
 "use strict";
 
+import { menu } from "./menu.js";
+
 var md = window.markdownit();
 
-var about = (function () {
-    var showAbout = function () {
+var about = {
+    showAbout: function () {
         window.mainContainer.innerHTML = "";
 
         fetch("markdown/about.md")
@@ -23,9 +25,7 @@ var about = (function () {
             });
 
         menu.showMenu("school");
-    };
+    }
+};
 
-    return {
-        showAbout: showAbout
-    };
-})(about);
+export { about };

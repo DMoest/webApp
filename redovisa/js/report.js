@@ -8,10 +8,12 @@
 
 "use strict";
 
+import { menu } from "./menu.js";
+
 var md = window.markdownit();
 
-var report = (function () {
-    var showReport = function () {
+var report = {
+    showReport: function () {
         window.mainContainer.innerHTML = "";
 
         fetch("markdown/kmom01.md")
@@ -23,9 +25,7 @@ var report = (function () {
             });
 
         menu.showMenu("assignment");
-    };
+    }
+};
 
-    return {
-        showReport: showReport
-    };
-})(report);
+export { report };

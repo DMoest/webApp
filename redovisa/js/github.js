@@ -8,8 +8,10 @@
 
 "use strict";
 
-var github = (function () {
-    var showGithub = function () {
+import { menu } from "./menu.js";
+
+var github = {
+    showGithub: function () {
         window.mainContainer.innerHTML = "";
 
         // Modern way with fetch
@@ -22,7 +24,7 @@ var github = (function () {
                 data.forEach(function(repo) {
                     var repoElement = document.createElement("a");
 
-                    console.info(repoElement);
+                    // console.info(repoElement);
 
                     repoElement.className = "github--links";
                     repoElement.href = "https://api.github.com/users/DMoest/repos";
@@ -45,20 +47,12 @@ var github = (function () {
         title.className = "title";
         title.textContent = "Github Repos";
 
-        // var githubRequest = new XMLHttpRequest();
-
-        // githubRequest.addEventListener("load", renderGithubRepos);
-        // githubRequest.open("GET", "https://api.github.com/users/DMoest/repos");
-        // githubRequest.send();
-
         window.mainContainer.appendChild(title);
 
         window.rootElement.appendChild(window.mainContainer);
 
         menu.showMenu("folder");
-    };
+    }
+};
 
-    return {
-        showGithub: showGithub
-    };
-})(github);
+export { github };

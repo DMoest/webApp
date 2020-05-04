@@ -5,17 +5,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack -d",
-    "style": "sass base.scss css/style.min.css --compressed"
+    "watch": "webpack -d --watch",
+    "style": "sass base.scss style.css",
+    "style-min": "sass base.scss style.min.css --style compressed"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.15",
-    "sass": "^1.26.5",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.26.5"
+  },
+  "devDependencies": {
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   },
-  "devDependencies": {},
   "description": ""
 }

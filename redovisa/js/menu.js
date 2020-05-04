@@ -4,12 +4,17 @@
  * Daniel Andersson, DAAP19
 */
 
-/* global home about github report */
+/* global */
 
 "use strict";
 
-var menu = (function () {
-    var showMenu = function (selected) {
+import { home } from "./home.js";
+import { about } from "./about.js";
+import { github } from "./github.js";
+import { report } from "./report.js";
+
+var menu = {
+    showMenu: function (selected) {
         window.navigation.innerHTML = "";
 
         var navElements = [
@@ -44,9 +49,7 @@ var menu = (function () {
         });
 
         window.rootElement.appendChild(window.navigation);
-    };
+    }
+};
 
-    return {
-        showMenu: showMenu
-    };
-})(menu);
+export { menu };

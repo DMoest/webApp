@@ -8,6 +8,8 @@
 
 "use strict";
 
+import { home } from "./home.js";
+
 (function () {
     window.rootElement = document.getElementById("root");
 

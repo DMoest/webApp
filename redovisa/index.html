@@ -4,8 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-        <!-- Normalize stylesheet -->
-        <link rel="stylesheet" href="css/normalize.min.css">
         <!-- Stylesheet -->
         <link rel="stylesheet" href="css/style.min.css">
         <!-- Google Font -->
@@ -19,30 +17,8 @@
         <div id="root"></div>
 
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
-        <script type="text/javascript" src="js/menu.js"></script>
-        <script type="text/javascript" src="js/home.js"></script>
-        <script type="text/javascript" src="js/about.js"></script>
-        <script type="text/javascript" src="js/github.js"></script>
-        <script type="text/javascript" src="js/report.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
+        <script src="dist/bundle.js"></script>
         <script src="js/detect-swipe-event.js"></script>
-        <script>
-        /**
-         * Code to test and verify or as default behaviour.
-         */
-        window.detectSwipeEvent(window, function (element, direction) {
-
-            console.log("You swiped on element " + element + " to " + direction + " direction");
-
-            switch (direction)  {
-                case "left":
-                    //window.history.back();
-                    break;
-                case "right":
-                    //window.history.go(1);
-                    break;
-            }
-        });
-        </script>
+        <script src="js/detect-swipe-event-action.js"></script>
     </body>
 </html>

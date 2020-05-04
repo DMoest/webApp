@@ -8,8 +8,10 @@
 
 "use strict";
 
-var home = (function () {
-    var showHome = function () {
+import { menu } from "./menu.js";
+
+var home = {
+    showHome: function () {
         window.mainContainer.innerHTML = "";
 
         var title = document.createElement("h1");
@@ -57,9 +59,7 @@ var home = (function () {
         // --- --- --- --- --- --- ---
 
         menu.showMenu("person");
-    };
+    }
+};
 
-    return {
-        showHome: showHome
-    };
-})(home);
+export { home };
