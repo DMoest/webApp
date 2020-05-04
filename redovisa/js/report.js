@@ -4,7 +4,7 @@
  * Daniel Andersson, DAAP19
 */
 
-/* global menu */
+/* global */
 
 "use strict";
 

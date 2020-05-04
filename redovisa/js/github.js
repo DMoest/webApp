@@ -4,7 +4,7 @@
  * Daniel Andersson, DAAP19
 */
 
-/* global mainContainer rootElement menu */
+/* global mainContainer rootElement */
 
 "use strict";
 
