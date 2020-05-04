@@ -1,8 +1,11 @@
 /**
  * Webbapplikationer för mobila enheter
- * KMOM01 - Lagerappen
+ * KMOM02 - Lagerappen
  * Daniel Andersson, DAAP19
+ * module: main
 */
+
+/* global */
 
 "use strict";
 

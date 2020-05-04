@@ -1,20 +1,28 @@
 /**
  * Webbapplikationer för mobila enheter
- * KMOM01 - Lagerappen
+ * KMOM02 - Lagerappen
  * Daniel Andersson, DAAP19
+ * module: home
 */
+
+/* global */
 
 "use strict";
 
-var home = (function () {
-    var showHome = function () {
+import { menu } from "./menu.js";
+
+var home = {
+    titleText: "Lagerappen",
+    description: " och välkommen till lagerappen.",
+
+    showHome: function () {
         window.mainContainer.innerHTML = "";
 
         var title = document.createElement("h1");
         var image = document.createElement("img");
 
         title.className = "title";
-        title.textContent = "Lagerappen";
+        title.textContent = home.titleText;
         image.src = "img/bolts_n_screws.jpg";
         image.alt = "Warehouse stocks";
 
@@ -29,7 +37,7 @@ var home = (function () {
         }
 
         greeting.textContent = timeOfDayGreeting +
-            " och välkommen till lagerappen.";
+            home.description;
 
         window.mainContainer.appendChild(title);
         window.mainContainer.appendChild(greeting);
@@ -38,11 +46,7 @@ var home = (function () {
         window.rootElement.appendChild(window.mainContainer);
 
         menu.showMenu("home");
-    };
-
-    return {
-        showHome: showHome
-    };
-})(home);
+    }
+};
 
 export { home };

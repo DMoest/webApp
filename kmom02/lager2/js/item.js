@@ -1,60 +1,50 @@
 /**
  * Webbapplikationer för mobila enheter
- * KMOM01 - Lagerappen
+ * KMOM02 - Lagerappen
  * Daniel Andersson, DAAP19
+ * module: item
 */
+
+/* global */
 
 "use strict";
 
-var item = (function () {
-    var showItem = function (product) {
+import { menu } from "./menu.js";
+
+var item = {
+    showItem: function (item) {
         window.mainContainer.innerHTML = "";
 
-        var apiKey = "43cd935f2bd048cc1aa5af2359181e0d";
-        var root = document.getElementById("root");
+        var apiKey = '43cd935f2bd048cc1aa5af2359181e0d';
         var title = document.createElement("h1");
 
-        title.textContent = product.name;
+        title.textContent = item.name;
 
         window.mainContainer.appendChild(title);
 
         // FETCH:
-        fetch('https://lager.emilfolino.se/v2/products/{product.id}?api_key=43cd935f2bd048cc1aa5af2359181e0d')
+        fetch('https://lager.emilfolino.se/v2/products/{item.id}?api_key=' + apiKey)
             .then(function(response) {
                 return response.json();
             })
             .then(function(result) {
                 var productId = document.createElement("p");
-
-                productId.textContent = "ID: " + product.id;
-
                 var productArticleNr = document.createElement("p");
-
-                productArticleNr.textContent = "Artikel nr: " + product.article_number;
-
                 var productName = document.createElement("p");
-
-                productName.textContent = "Namn: " + product.name;
-
                 var productDesc = document.createElement("p");
-
-                productDesc.textContent = "Beskrivning: " + product.description;
-
                 var productSpec = document.createElement("p");
-
-                productSpec.textContent = "Specifikationer: " + product.specifiers;
-
                 var productStock = document.createElement("p");
-
-                productStock.textContent = "Saldo: " + product.stock;
-
                 var productLocation = document.createElement("p");
-
-                productLocation.textContent = "Plats: " + product.location;
-
                 var productPrice = document.createElement("p");
 
-                productPrice.textContent = "Pris: " + product.price;
+                productId.textContent = "ID: " + item.id;
+                productArticleNr.textContent = "Artikel nr: " + item.article_number;
+                productName.textContent = "Namn: " + item.name;
+                productDesc.textContent = "Beskrivning: " + item.description;
+                productSpec.textContent = "Specifikationer: " + item.specifiers;
+                productStock.textContent = "Saldo: " + item.stock;
+                productLocation.textContent = "Plats: " + item.location;
+                productPrice.textContent = "Pris: " + item.price;
 
                 window.mainContainer.appendChild(productId);
                 window.mainContainer.appendChild(productArticleNr);
@@ -68,12 +58,8 @@ var item = (function () {
 
         window.rootElement.appendChild(window.mainContainer);
 
-        window.menu.showMenu("info_outline");
-    };
-
-    return {
-        showItem: showItem
-    };
-})(item);
+        menu.showMenu("info_outline");
+    }
+};
 
 export { item };

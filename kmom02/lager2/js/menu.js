@@ -1,8 +1,11 @@
 /**
  * Webbapplikationer för mobila enheter
- * KMOM01 - Lagerappen
+ * KMOM02 - Lagerappen
  * Daniel Andersson, DAAP19
+ * module: menu
 */
+
+/* global navigation */
 
 "use strict";
 
@@ -10,8 +13,8 @@ import { home } from "./home.js";
 import { stock } from "./stock.js";
 import { item } from "./item.js";
 
-var menu = (function () {
-    var showMenu = function (selected) {
+var menu = {
+    showMenu: function (selected) {
         window.navigation.innerHTML = "";
 
         var navElements = [
@@ -44,12 +47,8 @@ var menu = (function () {
             window.navigation.appendChild(navElement);
         });
 
-        window.rootElement.appendChild(window.navigation);
-    };
-
-    return {
-        showMenu: showMenu
-    };
-})(menu);
+        window.rootElement.appendChild(navigation);
+    }
+};
 
 export { menu };

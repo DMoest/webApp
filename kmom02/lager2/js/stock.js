@@ -1,15 +1,21 @@
 /**
  * Webbapplikationer för mobila enheter
- * KMOM01 - Lagerappen
+ * KMOM02 - Lagerappen
  * Daniel Andersson, DAAP19
+ * module: stock
 */
+
+/* global mainContainer */
 
 "use strict";
 
-var md = window.markdownit();
+import { menu } from "./menu.js";
+import { item } from "./item.js";
 
-var stock = (function () {
-    var showStock = function () {
+// var md = window.markdownit();
+
+var stock = {
+    showStock: function () {
         window.mainContainer.innerHTML = "";
 
         var apiKey = "43cd935f2bd048cc1aa5af2359181e0d";
@@ -21,7 +27,7 @@ var stock = (function () {
         window.mainContainer.appendChild(header);
 
         // FETCH:
-        fetch('https://lager.emilfolino.se/v2/products?api_key=43cd935f2bd048cc1aa5af2359181e0d')
+        fetch('https://lager.emilfolino.se/v2/products?api_key=' + apiKey)
             .then(function(response) {
                 return response.json();
             })
@@ -50,14 +56,10 @@ var stock = (function () {
                 // console.info(result);
             });
 
-        window.root.appendChild(mainContainer);
+        root.appendChild(mainContainer);
 
         menu.showMenu("storage");
-    };
-
-    return {
-        showStock: showStock
-    };
-})(stock);
+    }
+};
 
 export { stock };
