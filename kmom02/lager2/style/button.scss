@@ -5,3 +5,18 @@
  * Module: button
 */
 
+.button {
+    text-transform: uppercase;
+    color: $color_primary;
+    background-color: $color_white;
+    padding: 0.3rem 0.5rem;
+    margin: 1rem;
+    border: $border;
+    border-radius: $border-radius-full;
+    transition: $transition-time;
+
+    &:hover {
+        color: $color_white;
+        background-color: $color_primary;
+    }
+}

@@ -5,8 +5,9 @@
  * Module: base
 */
 
-@import 'style/normalize.scss';
+@import 'style/normalize';
 @import 'style/variables';
+@import 'style/mixins';
 @import 'style/container';
 @import 'style/navigation';
 @import 'style/typography';

@@ -10,8 +10,8 @@
 "use strict";
 
 import { home } from "./home.js";
-import { stock } from "./stock.js";
-import { item } from "./item.js";
+import { productList } from "./product_list.js";
+import { productDetails } from "./product_details.js";
 
 var menu = {
     showMenu: function (selected) {
@@ -19,8 +19,8 @@ var menu = {
 
         var navElements = [
             {name: "Hem", class: "home", nav: home.showHome},
-            {name: "Lager", class: "storage", nav: stock.showStock},
-            {name: "Item", class: "info_outline", nav: item.showItem}
+            {name: "Produkter", class: "storage", nav: productList.showProducts},
+            {name: "Detaljer", class: "info_outline", nav: productDetails.showProduct}
         ];
 
         navElements.forEach(function (element) {

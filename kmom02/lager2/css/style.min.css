@@ -347,7 +347,6 @@ template {
 /* --- FONTS --- */
 /* --- MODULAR SCALE --- */
 /* --- TEXT -> SIZE & WEIGHT --- */
-/* --- RESPONSIVE SCALEs --- */
 /* --- BASELINE & RYTHEM --- */
 /* line height should be around 1.2 - 1.5 (small screen = smaller line heigt | large screen = larger line height) */
 /* font_size-body * line_heigt = MagicNumber */
@@ -355,6 +354,13 @@ template {
 /* --- BORDERS --- */
 /* --- TIME --- */
 /* --- BREAKPOINTS --- */
+/**
+ * Webbapplikationer för mobila enheter
+ * Kmom02 - Lagerappen
+ * Daniel Andersson, DAAP19
+ * Module: mixins
+*/
+/* --- RESPONSIVE TYPOGRAPHY SCALEs --- */
 /**
  * Webbapplikationer för mobila enheter
  * Kmom02 - Lagerappen
@@ -482,5 +488,19 @@ a {
  * Daniel Andersson, DAAP19
  * Module: button
 */
+.button {
+  text-transform: uppercase;
+  color: #0094a8;
+  background-color: #fcfcfc;
+  padding: 0.3rem 0.5rem;
+  margin: 1rem;
+  border: 0.05rem solid #0094a8;
+  border-radius: 50rem;
+  transition: 0.3s;
+}
+.button:hover {
+  color: #fcfcfc;
+  background-color: #0094a8;
+}
 
 /*# sourceMappingURL=style.min.css.map */
