@@ -5,8 +5,6 @@
  * module: product detalis
 */
 
-/* global mainContainer */
-
 "use strict";
 
 import { products } from "./products.js";
@@ -26,7 +24,7 @@ let productDetails = {
         root.appendChild(utils.createElement({
             type: "a",
             className: "button",
-            textContent:"Tillbaka",
+            textContent: "Tillbaka",
             href: "#",
             onclick: productList.showProducts
         }));
@@ -40,7 +38,7 @@ let productDetails = {
             type: "p",
             textContent: "ID: " + product.id
         }));
-        
+
         root.appendChild(utils.createElement({
             type: "p",
             textContent: "Artikelnr: " + product.article_number
@@ -50,22 +48,22 @@ let productDetails = {
             type: "p",
             textContent: "Beskrivning: " + product.description
         }));
-        
+
         root.appendChild(utils.createElement({
             type: "p",
             textContent: "Specifikationer: " + product.specifiers
         }));
-        
+
         root.appendChild(utils.createElement({
             type: "p",
             textContent: "Saldo: " + product.stock
         }));
-        
+
         root.appendChild(utils.createElement({
             type: "p",
             textContent: "Plats: " + product.location
         }));
-        
+
         root.appendChild(utils.createElement({
             type: "p",
             textContent: "Pris: " + product.pris

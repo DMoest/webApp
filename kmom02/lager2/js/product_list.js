@@ -5,8 +5,6 @@
  * module: products list
 */
 
-/* global mainContainer */
-
 "use strict";
 
 import { menu } from "./menu.js";
@@ -36,7 +34,7 @@ let productList = {
 
             root.appendChild(productElement);
         });
-    
+
         menu.showMenu("storage");
     }
 };

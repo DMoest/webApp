@@ -5,8 +5,6 @@
  * module: utils
 */
 
-/* global mainContainer */
-
 "use strict";
 
 const utils = {
