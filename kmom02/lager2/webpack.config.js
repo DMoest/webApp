@@ -6,7 +6,7 @@
 */
 
 module.exports = {
-    entry: './js/main.js',
+    entry: './js/main.js', /* ./ betyder relativ path */
     output: {
         filename: './bundle.js'
     }

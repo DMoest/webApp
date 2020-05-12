@@ -34,8 +34,7 @@ h4 {
 
 p {
     font-weight: $fontWeight-p;
-    padding-top: 0;
-    padding-bottom: $verticalRythm;
+    padding: 0 $verticalRythm $verticalRythm;
 }
 
 a {

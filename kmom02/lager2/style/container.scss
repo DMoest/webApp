@@ -15,18 +15,18 @@ body {
     background-color: $color_bg;
 }
 
+#root {
+    padding-bottom: (2 * $verticalRythm);
+}
+
 .container {
     padding: $verticalRythm;
-    padding-bottom: (2 * $verticalRythm);
+    padding-bottom: (4 * $verticalRythm);
 
     img {
         display: block;
         width: 100%;
         margin: 0 auto;
-    }
-
-    p:last-child {
-        padding-bottom: $padding_p-bottom;
     }
 }
 
@@ -39,4 +39,8 @@ body {
         color: $color_linkColor;
         text-decoration: underline;
     }
+}
+
+.productElement {
+    padding-left: $verticalRythm;
 }

@@ -10,7 +10,7 @@
     "style-min": "sass base.scss style.min.css --style compressed"
   },
   "keywords": [],
-  "author": "",
+  "author": "Daniel Andersson, daap19",
   "license": "ISC",
   "dependencies": {
     "sass": "^1.26.5"
@@ -19,5 +19,5 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   },
-  "description": ""
+  "description": "Webapplication made for the course Webapp @ BTH."
 }

@@ -66,7 +66,7 @@ let productDetails = {
 
         root.appendChild(utils.createElement({
             type: "p",
-            textContent: "Pris: " + product.pris
+            textContent: "Pris: " + product.price
         }));
 
         menu.showMenu("info_outline");

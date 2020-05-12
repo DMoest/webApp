@@ -32,7 +32,7 @@ let productList = {
                 return productDetails.showProduct(product.id);
             });
 
-            root.appendChild(productElement);
+            window.root.appendChild(productElement);
         });
 
         menu.showMenu("storage");

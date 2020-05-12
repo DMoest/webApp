@@ -5,19 +5,19 @@
  * module: products
 */
 
+import { baseUrl, apiKey } from "./variables.js";
+
 "use strict";
 
 var products = {
     allProducts: [],
 
     getAllProducts(callback) {
-        var apiKey = "43cd935f2bd048cc1aa5af2359181e0d";
-
         if (products.allProducts.length > 0) {
             return callback();
         }
 
-        fetch('https://lager.emilfolino.se/v2/products?api_key=' + apiKey)
+        fetch(`${baseUrl}products?api_key=${apiKey}`)
             .then(function(response) {
                 return response.json();
             })

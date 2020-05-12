@@ -17,6 +17,7 @@ var home = {
 
     showHome: function () {
         window.mainContainer.innerHTML = "";
+        window.root.innerHTML = "";
 
         var title = document.createElement("h1");
         var image = document.createElement("img");

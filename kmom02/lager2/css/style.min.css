@@ -377,17 +377,18 @@ body {
   background-color: #FFF;
 }
 
+#root {
+  padding-bottom: 2.6rem;
+}
+
 .container {
   padding: 1.3rem;
-  padding-bottom: 2.6rem;
+  padding-bottom: 5.2rem;
 }
 .container img {
   display: block;
   width: 100%;
   margin: 0 auto;
-}
-.container p:last-child {
-  padding-bottom: 2.6rem;
 }
 
 /* GITHUB */
@@ -398,6 +399,10 @@ body {
 .github--links:hover {
   color: #0094a8;
   text-decoration: underline;
+}
+
+.productElement {
+  padding-left: 1.3rem;
 }
 
 /**
@@ -423,9 +428,9 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 5px;
+  padding: 0.325rem;
 }
-.bottom-nav a s i {
+.bottom-nav a i {
   color: #fcfcfc;
   padding: 5px;
 }
@@ -469,8 +474,7 @@ h4 {
 
 p {
   font-weight: 400;
-  padding-top: 0;
-  padding-bottom: 1.3rem;
+  padding: 0 1.3rem 1.3rem;
 }
 
 a {
@@ -489,18 +493,25 @@ a {
  * Module: button
 */
 .button {
+  font-family: "Titillium Web", sans-serif;
+  display: block;
+  padding: 0.65rem 0.4333333333rem;
+  margin: 1.3rem;
+  text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
   color: #0094a8;
   background-color: #fcfcfc;
-  padding: 0.3rem 0.5rem;
-  margin: 1rem;
   border: 0.05rem solid #0094a8;
-  border-radius: 50rem;
-  transition: 0.3s;
+  border-radius: 0.3rem;
+  transition: all 0.3s;
 }
 .button:hover {
   color: #fcfcfc;
   background-color: #0094a8;
+}
+.button:active {
+  box-shadow: inset 0 0.4rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 /*# sourceMappingURL=style.min.css.map */
