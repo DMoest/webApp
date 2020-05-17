@@ -35,7 +35,7 @@ let productList = {
             window.root.appendChild(productElement);
         });
 
-        menu.showMenu("storage");
+        menu.showMenu("storage"); /* skapar/visar menu med markerat val */
     }
 };
 

@@ -17,8 +17,6 @@ let productDetails = {
         let root = document.getElementById("root");
         let product = products.getProduct(productId);
 
-        // root.className = "container";
-
         utils.removeNodes("root");
 
         root.appendChild(utils.createElement({

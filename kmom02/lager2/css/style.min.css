@@ -493,8 +493,9 @@ a {
  * Module: button
 */
 .button {
-  font-family: "Titillium Web", sans-serif;
   display: block;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.3rem;
   padding: 0.65rem 0.4333333333rem;
   margin: 1.3rem;
   text-decoration: none;
@@ -509,9 +510,10 @@ a {
 .button:hover {
   color: #fcfcfc;
   background-color: #0094a8;
+  box-shadow: inset -0.2rem -0.3rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 .button:active {
-  box-shadow: inset 0 0.4rem 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0.25rem 0.35rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 /*# sourceMappingURL=style.min.css.map */

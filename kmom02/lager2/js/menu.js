@@ -12,7 +12,7 @@
 import { home } from "./home.js";
 import { productList } from "./product_list.js";
 import { productDetails } from "./product_details.js";
-import order from "./order.js";
+import orderList from "./order_list.js";
 
 var menu = {
     showMenu: function (selected) {
@@ -22,7 +22,7 @@ var menu = {
             {name: "Hem", class: "home", nav: home.showHome},
             {name: "Produkter", class: "storage", nav: productList.showProducts},
             {name: "Detaljer", class: "info_outline", nav: productDetails.showProduct},
-            {name: "Beställningar", class: "shopping_cart", nav: order.showOrders}
+            {name: "Beställningar", class: "shopping_cart", nav: orderList.showOrders},
         ];
 
         navElements.forEach(function (element) {

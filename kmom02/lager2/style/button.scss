@@ -6,8 +6,9 @@
 */
 
 .button {
-    font-family: 'Titillium Web', sans-serif;
     display: block;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: $fontSize_button;
     padding: ($verticalRythm / 2) ($verticalRythm / 3);
     margin: $verticalRythm;
     text-decoration: none;
@@ -22,9 +23,10 @@
     &:hover {
         color: $color_white;
         background-color: $color_primary;
+        box-shadow: inset -0.2rem -0.3rem 0.5rem $color_shadow;
     }
     
     &:active {
-        box-shadow: inset 0 0.4rem 0.5rem $color_shadow;
+        box-shadow: inset 0.25rem 0.35rem 0.5rem $color_shadow;
     }
 }
