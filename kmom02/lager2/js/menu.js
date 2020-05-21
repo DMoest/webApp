@@ -9,10 +9,10 @@
 
 "use strict";
 
-import { home } from "./home.js";
-import { productList } from "./product_list.js";
-import { productDetails } from "./product_details.js";
-import orderList from "./order_list.js";
+import home from "./home.js";
+import productList from "./views/product_listView.js";
+import productDetails from "./views/product_detailsView.js";
+import orderList from "./views/order_listView.js";
 
 var menu = {
     showMenu: function (selected) {
@@ -21,8 +21,8 @@ var menu = {
         var navElements = [
             {name: "Hem", class: "home", nav: home.showHome},
             {name: "Produkter", class: "storage", nav: productList.showProducts},
-            {name: "Detaljer", class: "info_outline", nav: productDetails.showProduct},
             {name: "Beställningar", class: "shopping_cart", nav: orderList.showOrders},
+            {name: "Detaljer", class: "info_outline", nav: productDetails.showProduct},
         ];
 
         navElements.forEach(function (element) {
@@ -53,4 +53,4 @@ var menu = {
     },
 };
 
-export { menu };
+export default menu;

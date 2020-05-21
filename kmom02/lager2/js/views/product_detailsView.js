@@ -7,15 +7,16 @@
 
 "use strict";
 
-import { products } from "./products.js";
-import { productList } from "./product_list.js";
-import utils from "./utils.js";
-import { menu } from "./menu.js";
+import products from "../src/products.js";
+import productList from "./product_listView.js";
+import utils from "../utils.js";
+import menu from "../menu.js";
 
 let productDetails = {
     showProduct: function(productId) {
         let root = document.getElementById("root");
         let product = products.getProduct(productId);
+        console.info("(productDetails) Product ->", product);
 
         utils.removeNodes("root");
 
@@ -71,4 +72,4 @@ let productDetails = {
     }
 };
 
-export { productDetails };
+export default productDetails;

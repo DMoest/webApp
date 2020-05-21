@@ -7,9 +7,9 @@
 
 "use strict";
 
-import { menu } from "./menu.js";
-import { products } from "./products.js";
-import { productDetails } from "./product_details.js";
+import menu from "../menu.js";
+import products from "../src/products.js";
+import productDetails from "./product_detailsView.js";
 
 let productList = {
     showProducts() {
@@ -39,4 +39,4 @@ let productList = {
     }
 };
 
-export { productList };
+export default productList;

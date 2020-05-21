@@ -32,6 +32,21 @@ h4 {
     font-weight: $fontWeight-subHeader;
 }
 
+h2 {
+    font-size: $fontSize-h2;
+    font-weight: $fontWeight-subHeader;
+}
+
+h3 {
+    font-size: $fontSize-h3;
+    font-weight: $fontWeight-subHeader;
+}
+
+h4 {
+    font-size: $fontSize-h4;
+    font-weight: $fontWeight-subHeader;
+}
+
 p {
     font-weight: $fontWeight-p;
     padding: 0 $verticalRythm $verticalRythm;
@@ -39,9 +54,32 @@ p {
 
 a {
     text-decoration: none;
-    transition: all $transition-time;
+    transition: all $transitionTime-hover;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .title {
     text-align: center;
+}
+
+.productElement,
+.orderElement {
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active {
+        color: $color_primary-light;
+    }
+}
+
+hr {
+    text-align: center;
+    width: 75%;
+    height: 0;
+    border: 1px solid;
+    color: rgba($color: $color_grey-veryLight, $alpha: 0.5);
 }

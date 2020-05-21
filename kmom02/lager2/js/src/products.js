@@ -5,7 +5,7 @@
  * module: products
 */
 
-import { baseUrl, apiKey } from "./variables.js";
+import { baseUrl, apiKey } from "../variables.js";
 
 "use strict";
 
@@ -32,7 +32,11 @@ var products = {
         return products.allProducts.filter(function(product) {
             return product.id == productId;
         })[0];
-    }
+    },
+
+    updateProductStock: function(item) {
+        return  
+    },
 };
 
-export { products };
+export default products;

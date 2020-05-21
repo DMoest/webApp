@@ -9,7 +9,7 @@
 
 "use strict";
 
-import { menu } from "./menu.js";
+import menu from "./menu.js";
 
 var home = {
     titleText: "Lagerappen",
@@ -50,4 +50,4 @@ var home = {
     }
 };
 
-export { home };
+export default home;
