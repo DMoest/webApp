@@ -16,7 +16,8 @@ let productDetails = {
     showProduct: function(productId) {
         let root = document.getElementById("root");
         let product = products.getProduct(productId);
-        console.info("(productDetails) Product ->", product);
+
+        // console.info("(productDetails) Product ->", product);
 
         utils.removeNodes("root");
 

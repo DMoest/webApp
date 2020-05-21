@@ -5,6 +5,8 @@
  * module: order details
 */
 
+/* global container */
+
 "use strict";
 
 import orders from "../src/orders.js";
@@ -16,9 +18,6 @@ let orderDetails = {
     showOrder: function(orderId) {
         let root = document.getElementById("root");
         let order = orders.getOrder(orderId);
-        let lb = utils.createElement({
-            type: "BR"
-        }); /* LB for LineBreak */
 
         console.info("(orderDetails) Order -> ", order);
 
@@ -39,74 +38,72 @@ let orderDetails = {
         }));
 
         container.appendChild(utils.createElement({
+            type: "h1",
+            textContent: order.name,
+            className: "container-order-customer-header"
+        }));
+
+        container.appendChild(utils.createElement({
             type: "div",
             id:  "container-customer",
             className: "container-order-customer"
         }));
-        
-        container.appendChild(utils.createElement({
-            type: "h1",
-            textContent: order.name,
-            className: "container-order-header"
-        }));
 
-        var containerOrder = document.getElementById("container");
         var containerCustomer = document.getElementById("container-customer");
-        var containerItems = document.getElementById("container-items");
 
-        container.appendChild(utils.createElement({
+        containerCustomer.appendChild(utils.createElement({
             type: "p",
             textContent: "Adress: ",
-            className: "container-order-labels"
+            className: "container-order-customer-labels"
         }));
 
-        container.appendChild(utils.createElement({
+        containerCustomer.appendChild(utils.createElement({
             type:           "p",
             textContent:    order.address+ "\n"+ order.zip+ " "+ order.city+ "\n"+ order.country,
-            className:      "container-order-details"
+            className:      "container-order-customer-details"
         }));
-        
-        container.appendChild(utils.createElement({
+
+        containerCustomer.appendChild(utils.createElement({
             type: "p",
             textContent: "Order ID: ",
-            className: "container-order-labels"
+            className: "container-order-customer-labels"
         }));
 
-        container.appendChild(utils.createElement({
+        containerCustomer.appendChild(utils.createElement({
             type:           "p",
             textContent:    order.id,
-            className:      "container-order-details"
+            className:      "container-order-customer-details"
         }));
 
-        container.appendChild(utils.createElement({
+        containerCustomer.appendChild(utils.createElement({
             type: "p",
             textContent: "Status: ",
-            className: "container-order-labels"
+            className: "container-order-customer-labels"
         }));
 
-        container.appendChild(utils.createElement({
+        containerCustomer.appendChild(utils.createElement({
             type: "p",
             textContent: order.status,
-            className:      "container-order-details"
+            className:      "container-order-customer-details"
         }));
 
         root.appendChild(utils.createElement({
             type: "a",
-            className: "button",
+            className: "button button-confirm",
             textContent: "Packa Order",
             href: "#",
             onclick: orderList.showOrders
         }));
 
-        (function(orderId) {
+        (function() {
             console.info("order.order_items ->", order.order_items);
 
-            var counter = 0;
-            
+            // var counter = 0;
+
             container.appendChild(utils.createElement({
                 type: "h3",
                 textContent: "Beställt ",
-                className: "container-order-subHeader"
+                className: "container-order-items-subHeader"
             }));
 
             container.appendChild(utils.createElement({
@@ -114,7 +111,7 @@ let orderDetails = {
                 id:  "container-order-items",
                 className: "container-order-items"
             }));
-            
+
             var orderItems = order.order_items.map(function(orderItem) {
                 console.info("orderItem -> ", orderItem.name);
 
@@ -123,56 +120,82 @@ let orderDetails = {
                 orderItemsContainer.appendChild(utils.createElement({
                     type: "p",
                     textContent: "Artikel ",
-                    className:      "container-order-labels"
+                    className:      "container-order-items-labels"
                 }));
 
                 orderItemsContainer.appendChild(utils.createElement({
                     type: "p",
                     textContent: orderItem.name,
-                    className:      "container-order-details"
+                    className:      "container-order-items-details"
                 }));
 
                 orderItemsContainer.appendChild(utils.createElement({
                     type: "p",
                     textContent: "Artikelnr. ",
-                    className:      "container-order-labels"
+                    className:      "container-order-items-labels"
                 }));
 
                 orderItemsContainer.appendChild(utils.createElement({
                     type: "p",
                     textContent: orderItem.product_id,
-                    className:      "container-order-details"
+                    className:      "container-order-items-details"
                 }));
 
                 orderItemsContainer.appendChild(utils.createElement({
                     type: "p",
                     textContent: "Antal ",
-                    className:      "container-order-labels"
+                    className:      "container-order-items-labels"
                 }));
 
                 orderItemsContainer.appendChild(utils.createElement({
                     type: "p",
                     textContent: orderItem.amount,
-                    className:      "container-order-details"
+                    className:      "container-order-items-details"
                 }));
 
                 orderItemsContainer.appendChild(utils.createElement({
                     type: "p",
                     textContent: "Plats ",
-                    className:      "container-order-labels"
+                    className:      "container-order-items-labels"
                 }));
 
                 orderItemsContainer.appendChild(utils.createElement({
                     type: "p",
                     textContent: orderItem.location,
-                    className:      "container-order-details"
+                    className:      "container-order-items-details"
+                }));
+
+                orderItemsContainer.appendChild(utils.createElement({
+                    type: "p",
+                    textContent: "Styckpris ",
+                    className:      "container-order-items-labels"
+                }));
+
+                orderItemsContainer.appendChild(utils.createElement({
+                    type: "p",
+                    textContent: orderItem.price,
+                    className:      "container-order-items-details"
+                }));
+
+                orderItemsContainer.appendChild(utils.createElement({
+                    type: "p",
+                    textContent: "Pris ",
+                    className:      "container-order-items-labels"
+                }));
+
+                orderItemsContainer.appendChild(utils.createElement({
+                    type: "p",
+                    textContent: orderItem.price * orderItem.amount,
+                    className:      "container-order-items-details"
                 }));
 
                 orderItemsContainer.appendChild(utils.createElement({
                     type: "hr",
-                    className:      "container-order-subHeader"
+                    className:      "container-order-items-hr"
                 }));
             });
+
+            return orderItems;
         })();
 
         menu.showMenu("info_outline");

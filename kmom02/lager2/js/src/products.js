@@ -34,9 +34,9 @@ var products = {
         })[0];
     },
 
-    updateProductStock: function(item) {
-        return  
-    },
+    // updateProductStock: function(item) {
+    //     return
+    // },
 };
 
 export default products;

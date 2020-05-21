@@ -37,4 +37,22 @@
         box-shadow: inset 0.25rem 0.35rem 0.5rem $color_shadow;
         transform: translateY(0.04rem);
     }
+
+    &-confirm {
+        color: $color_confirm;
+        border: 0.05rem solid $color_confirm;
+        
+        &:hover {
+            color: $color_white;
+            background-color: $color_confirm;
+            border: $border-transparent;
+            box-shadow: inset -0.2rem -0.3rem 0.5rem $color_shadow, inset 0.05rem 0.1rem 0.3rem $color_highlight;
+        }
+
+        &:active {
+            background-color: $color_confirm-light;
+            box-shadow: inset 0.25rem 0.35rem 0.5rem $color_shadow;
+            transform: translateY(0.04rem);
+        }
+    }
 }

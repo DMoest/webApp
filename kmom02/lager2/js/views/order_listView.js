@@ -39,9 +39,9 @@ var orderList = (function () {
             return element;
         });
 
-        // console.info(orderElements); /* Rensa innan inlämning */
-
         menu.showMenu("shopping_cart"); /* skapar/visar menu med markerat val */
+
+        return orderElements;
     }
 
     var publicAPI = {

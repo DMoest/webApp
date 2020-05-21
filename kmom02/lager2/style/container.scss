@@ -20,54 +20,55 @@ body {
 }
 
 .container {
+    display: block;
     padding: $verticalRythm;
     padding-bottom: (4 * $verticalRythm);
 
-    &-order,
-    &-order-customer,
-    &-order-items {
+    &-order {
         width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-content: space-between;
 
-        &-header {
-            grid-column: 1 / 3;
-            grid-row: 1;
-        }
+        &-items,
+        &-customer {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-between;
+            padding-bottom: $verticalRythm;
 
-        &-subHeader {
-            padding: 0 $verticalRythm;
-            grid-column: 1 / 3;
-        }
-        
-        &-labels {
-            margin: 0;
-            padding-bottom: 0;
-            grid-column: 1;
-        }
-        
-        &-details {
-            margin: 0;
-            padding-bottom: 0;
-            grid-column: 2;
-            
-            // &-address {
-            //     grid-column-start: 2;
-            //     grid-row-start: 2;
-            // }
+            &-header {
+                grid-column: 1 / 3;
+                grid-row: 1;
+                margin: 0;
+            }
 
-            // &-id {
-            //     grid-row-start: 3;
-            // }
-            
-            // &-3 {
-            //     grid-row-start: 4;
-            // }
-        }
+            &-subHeader {
+                margin: 0;
+                padding: $verticalRythm;
+                grid-column: 1 / 3;
+            }
 
-        &-items {
-            grid-column: 1 / 3;
+            &-hr {
+                width: 80%;
+                height: 0;
+                margin-top: 0.5rem;
+                margin-bottom: 1rem;
+                text-align: center;
+                grid-column: 1 / 3;
+                border: 1px solid;
+                color: rgba($color: $color_grey-veryLight, $alpha: 0.5);
+            }
+
+            &-labels {
+                margin: 0;
+                padding-bottom: 0;
+                grid-column: 1;
+            }
+
+            &-details {
+                margin: 0;
+                padding-bottom: 0;
+                grid-column: 2;
+            }
         }
     }
 
