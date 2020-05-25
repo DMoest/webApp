@@ -55,4 +55,40 @@
             transform: translateY(0.04rem);
         }
     }
+
+    &-caution {
+        color: $color_caution;
+        border: 0.05rem solid $color_caution;
+        
+        &:hover {
+            color: $color_white;
+            background-color: $color_caution;
+            border: $border-transparent;
+            box-shadow: inset -0.2rem -0.3rem 0.5rem $color_shadow, inset 0.05rem 0.1rem 0.3rem $color_highlight;
+        }
+
+        &:active {
+            background-color: $color_caution-light;
+            box-shadow: inset 0.25rem 0.35rem 0.5rem $color_shadow;
+            transform: translateY(0.04rem);
+        }
+    }
+
+    &-danger {
+        color: $color_danger;
+        border: 0.05rem solid $color_danger;
+        
+        &:hover {
+            color: $color_white;
+            background-color: $color_danger;
+            border: $border-transparent;
+            box-shadow: inset -0.2rem -0.3rem 0.5rem $color_shadow, inset 0.05rem 0.1rem 0.3rem $color_highlight;
+        }
+
+        &:active {
+            background-color: $color_danger-light;
+            box-shadow: inset 0.25rem 0.35rem 0.5rem $color_shadow;
+            transform: translateY(0.04rem);
+        }
+    }
 }

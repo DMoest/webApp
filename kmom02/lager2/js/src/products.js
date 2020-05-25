@@ -34,9 +34,19 @@ var products = {
         })[0];
     },
 
-    // updateProductStock: function(item) {
-    //     return
+    // updateProductStock: function(productId) {
+    //     let product = getProduct(productId);
+    //     return console.info(getProduct(item));
     // },
+
+    checkProductStock: function(array) {
+        array.forEach(element => {
+            let product = getProduct(productId);
+            
+            return console.info("product -> ",product.name, "amount -> ", product.amount);
+        });
+    },
+
 };
 
 export default products;

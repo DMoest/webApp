@@ -6,7 +6,7 @@
 */
 
 /* -- COLORS --- */
-$color_white: #fcfcfc;
+$color_white: #fafafa;
 $color_black: #050505;
 $color_grey-veryLight: #cecece;
 $color_grey-light: #b1b1b1;
@@ -22,13 +22,22 @@ $color_primary-dark: #006977;
 $color_secondary: #0094a8;
 $color_linkColor: #0094a8;
 
-$color_confirm: #00a800;
-$color_confirm-light: #00c900;
-$color_confirm-dark: #008300;
+$color_confirm: #4CAF50;
+$color_confirm-light: #66BB6A;
+$color_confirm-dark: #388E3C;
 
-$color_positive: #00a84c;
-$color_negative: #a80000;
-$color_selected: #ebc000;
+$color_danger: #f44336;
+$color_danger-light: #ef5350;
+$color_danger-dark: #e53935;
+
+$color_caution: #388E3C;
+$color_caution-light: #388E3C;
+$color_caution-dark: #388E3C;
+
+$color_select: #ebc000;
+$color_select-light: #ebc000;
+$color_select-dark: #ebc000;
+
 $color_active: #00b1c9;
 $color_highlight: rgba(255, 255, 255, 0.75);
 $color_shadow: rgba(0,0,0,0.2);

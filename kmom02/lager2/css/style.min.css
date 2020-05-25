@@ -383,8 +383,7 @@ body {
 
 .container {
   display: block;
-  padding: 1.3rem;
-  padding-bottom: 5.2rem;
+  padding: 1.3rem 1.3rem 5.2rem;
 }
 .container-order {
   width: 100%;
@@ -442,8 +441,40 @@ body {
   text-decoration: underline;
 }
 
-.productElement {
-  padding-left: 1.3rem;
+.productElements,
+.orderElements {
+  margin: 0;
+  padding: 0 0 1.3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+}
+.productElements-header,
+.orderElements-header {
+  margin: 0;
+  grid-column: 1/3;
+}
+.productElements-label,
+.orderElements-label {
+  margin: 0;
+  padding-bottom: 0.65rem;
+  grid-column: 1;
+}
+.productElements-details,
+.orderElements-details {
+  margin: 0;
+  padding-bottom: 0.65rem;
+  text-decoration: none;
+  grid-column: 2;
+}
+.productElements-link:hover,
+.orderElements-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.productElements-link:active,
+.orderElements-link:active {
+  color: #01b6ce;
 }
 
 /**
@@ -465,14 +496,14 @@ body {
 }
 .bottom-nav a {
   cursor: pointer;
-  color: #fcfcfc;
+  color: #fafafa;
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 0.325rem;
 }
 .bottom-nav a i {
-  color: #fcfcfc;
+  color: #fafafa;
   padding: 5px;
 }
 
@@ -545,15 +576,6 @@ a:hover {
   text-align: center;
 }
 
-.productElement:hover,
-.orderElement:hover {
-  cursor: pointer;
-}
-.productElement:active,
-.orderElement:active {
-  color: #01b6ce;
-}
-
 /**
  * Webbapplikationer för mobila enheter
  * Kmom02 - Lagerappen
@@ -572,7 +594,7 @@ a:hover {
   text-transform: uppercase;
   text-align: center;
   color: #0094a8;
-  background-color: #fcfcfc;
+  background-color: #fafafa;
   border: 0.05rem solid #0094a8;
   border-radius: 0.3rem;
   transition-property: color, background-color, box-shadow, transform;
@@ -581,7 +603,7 @@ a:hover {
   overflow: hidden;
 }
 .button:hover {
-  color: #fcfcfc;
+  color: #fafafa;
   background-color: #0094a8;
   border: 0.05rem solid #FFF;
   box-shadow: inset -0.2rem -0.3rem 0.5rem rgba(0, 0, 0, 0.2), inset 0.05rem 0.1rem 0.3rem rgba(255, 255, 255, 0.75);
@@ -592,17 +614,47 @@ a:hover {
   transform: translateY(0.04rem);
 }
 .button-confirm {
-  color: #00a800;
-  border: 0.05rem solid #00a800;
+  color: #4CAF50;
+  border: 0.05rem solid #4CAF50;
 }
 .button-confirm:hover {
-  color: #fcfcfc;
-  background-color: #00a800;
+  color: #fafafa;
+  background-color: #4CAF50;
   border: 0.05rem solid #FFF;
   box-shadow: inset -0.2rem -0.3rem 0.5rem rgba(0, 0, 0, 0.2), inset 0.05rem 0.1rem 0.3rem rgba(255, 255, 255, 0.75);
 }
 .button-confirm:active {
-  background-color: #00c900;
+  background-color: #66BB6A;
+  box-shadow: inset 0.25rem 0.35rem 0.5rem rgba(0, 0, 0, 0.2);
+  transform: translateY(0.04rem);
+}
+.button-caution {
+  color: #388E3C;
+  border: 0.05rem solid #388E3C;
+}
+.button-caution:hover {
+  color: #fafafa;
+  background-color: #388E3C;
+  border: 0.05rem solid #FFF;
+  box-shadow: inset -0.2rem -0.3rem 0.5rem rgba(0, 0, 0, 0.2), inset 0.05rem 0.1rem 0.3rem rgba(255, 255, 255, 0.75);
+}
+.button-caution:active {
+  background-color: #388E3C;
+  box-shadow: inset 0.25rem 0.35rem 0.5rem rgba(0, 0, 0, 0.2);
+  transform: translateY(0.04rem);
+}
+.button-danger {
+  color: #f44336;
+  border: 0.05rem solid #f44336;
+}
+.button-danger:hover {
+  color: #fafafa;
+  background-color: #f44336;
+  border: 0.05rem solid #FFF;
+  box-shadow: inset -0.2rem -0.3rem 0.5rem rgba(0, 0, 0, 0.2), inset 0.05rem 0.1rem 0.3rem rgba(255, 255, 255, 0.75);
+}
+.button-danger:active {
+  background-color: #ef5350;
   box-shadow: inset 0.25rem 0.35rem 0.5rem rgba(0, 0, 0, 0.2);
   transform: translateY(0.04rem);
 }

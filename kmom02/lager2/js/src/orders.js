@@ -13,7 +13,7 @@ import { baseUrl, apiKey } from "../variables.js";
 import products from "../src/products.js";
 
 var orders = (function() {
-    // var allOrders = [];
+    var allOrders = [];
 
     function getAllOrders(callback) {
         fetch(`${baseUrl}orders?api_key=${apiKey}`)
@@ -39,6 +39,9 @@ var orders = (function() {
     }
 
     function updateOrder(order_) {
+
+        fetch("PUT...")
+
         // var orderData = {
         //     name: order_.name,
         //     id: order_.id,

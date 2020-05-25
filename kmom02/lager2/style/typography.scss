@@ -64,14 +64,3 @@ a {
 .title {
     text-align: center;
 }
-
-.productElement,
-.orderElement {
-    &:hover {
-        cursor: pointer;
-    }
-
-    &:active {
-        color: $color_primary-light;
-    }
-}

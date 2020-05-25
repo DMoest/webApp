@@ -19,12 +19,22 @@ let productList = {
     renderProducts() {
         let root = document.getElementById("root");
 
-        root.innerHTML = "<h1>Produkter</h1>";
+        root.innerHTML = "";
+
+        let container = document.createElement("div");
+
+        container.className = "container";
+
+        container.innerHTML = "<h1>Produkter</h1>";
+
+        root.appendChild(container);
 
         products.allProducts.map(function (product) {
+
+
             let productElement = document.createElement("p");
 
-            productElement.className = "productElement";
+            productElement.className = "productElements productElements-link";
 
             productElement.textContent = product.name;
 
@@ -32,7 +42,7 @@ let productList = {
                 return productDetails.showProduct(product.id);
             });
 
-            window.root.appendChild(productElement);
+            container.appendChild(productElement);
         });
 
         menu.showMenu("storage"); /* skapar/visar menu med markerat val */

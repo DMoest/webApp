@@ -11,6 +11,8 @@
 
 import orders from "../src/orders.js";
 import orderList from "./order_listView.js";
+import products from "../src/products.js";
+import productDetails from "./product_detailsView.js";
 import utils from "../utils.js";
 import menu from "../menu.js";
 
@@ -92,17 +94,18 @@ let orderDetails = {
             className: "button button-confirm",
             textContent: "Packa Order",
             href: "#",
-            onclick: orderList.showOrders
+            onclick: products.checkProductStock
         }));
 
         (function() {
+            console.info("order ->", order);
             console.info("order.order_items ->", order.order_items);
 
             // var counter = 0;
 
             container.appendChild(utils.createElement({
                 type: "h3",
-                textContent: "Beställt ",
+                textContent: "Ordern ",
                 className: "container-order-items-subHeader"
             }));
 
@@ -138,7 +141,8 @@ let orderDetails = {
                 orderItemsContainer.appendChild(utils.createElement({
                     type: "p",
                     textContent: orderItem.product_id,
-                    className:      "container-order-items-details"
+                    className:      "container-order-items-details",
+                    id:      "orderItem-product_id"
                 }));
 
                 orderItemsContainer.appendChild(utils.createElement({
@@ -193,6 +197,13 @@ let orderDetails = {
                     type: "hr",
                     className:      "container-order-items-hr"
                 }));
+
+                var product = document.getElementById("orderItem-product_id");
+
+                product.addEventListener("click", function() {
+                    console.info("click!");
+                    return productDetails.showProduct(product.id);
+                });
             });
 
             return orderItems;
