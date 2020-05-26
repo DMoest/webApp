@@ -30,11 +30,9 @@ let productList = {
         root.appendChild(container);
 
         products.allProducts.map(function (product) {
-
-
             let productElement = document.createElement("p");
 
-            productElement.className = "productElements productElements-link";
+            productElement.className = "container_productElement container_productElement-link";
 
             productElement.textContent = product.name;
 

@@ -38,7 +38,7 @@ var orderList = (function () {
         var orderElements = orders.map(function(order_) {
             var element = document.createElement("p");
 
-            element.className = "orderElements";
+            element.className = "container_orderElement container_orderElement-link";
 
             element.textContent = order_.name;
 

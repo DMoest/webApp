@@ -6,6 +6,7 @@
 */
 
 import { baseUrl, apiKey } from "../variables.js";
+// import orders from "./orders.js";
 
 "use strict";
 
@@ -39,13 +40,15 @@ var products = {
     //     return console.info(getProduct(item));
     // },
 
-    checkProductStock: function(array) {
-        array.forEach(element => {
-            let product = getProduct(productId);
-            
-            return console.info("product -> ",product.name, "amount -> ", product.amount);
-        });
-    },
+    // checkProductStock: function(orderId) {
+    //     let order = orders.getOrder(orderId);
+
+    //     array.forEach(orderItem => {
+    //         let product = products.getProduct(productId);
+
+    //         return console.info("product -> ", product.name, "amount -> ", product.amount);
+    //     });
+    // },
 
 };
 

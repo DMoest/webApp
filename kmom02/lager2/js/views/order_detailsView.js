@@ -11,7 +11,6 @@
 
 import orders from "../src/orders.js";
 import orderList from "./order_listView.js";
-import products from "../src/products.js";
 import productDetails from "./product_detailsView.js";
 import utils from "../utils.js";
 import menu from "../menu.js";
@@ -36,57 +35,57 @@ let orderDetails = {
         root.appendChild(utils.createElement({
             type: "div",
             id:  "container",
-            className: "container-order"
+            className: "container"
         }));
 
         container.appendChild(utils.createElement({
             type: "h1",
             textContent: order.name,
-            className: "container-order-customer-header"
+            className: "container_orderCustomer-header"
         }));
 
         container.appendChild(utils.createElement({
             type: "div",
-            id:  "container-customer",
-            className: "container-order-customer"
+            id:  "container_customer",
+            className: "container_orderCustomer"
         }));
 
-        var containerCustomer = document.getElementById("container-customer");
+        var containerCustomer = document.getElementById("container_customer");
 
         containerCustomer.appendChild(utils.createElement({
             type: "p",
-            textContent: "Adress: ",
-            className: "container-order-customer-labels"
+            textContent: "Adress ",
+            className: "container_orderCustomer-label"
         }));
 
         containerCustomer.appendChild(utils.createElement({
             type:           "p",
             textContent:    order.address+ "\n"+ order.zip+ " "+ order.city+ "\n"+ order.country,
-            className:      "container-order-customer-details"
+            className:      "container_orderCustomer-data"
         }));
 
         containerCustomer.appendChild(utils.createElement({
             type: "p",
-            textContent: "Order ID: ",
-            className: "container-order-customer-labels"
+            textContent: "Order ID ",
+            className: "container_orderCustomer-label"
         }));
 
         containerCustomer.appendChild(utils.createElement({
             type:           "p",
             textContent:    order.id,
-            className:      "container-order-customer-details"
+            className:      "container_orderCustomer-data"
         }));
 
         containerCustomer.appendChild(utils.createElement({
             type: "p",
-            textContent: "Status: ",
-            className: "container-order-customer-labels"
+            textContent: "Status ",
+            className: "container_orderCustomer-label"
         }));
 
         containerCustomer.appendChild(utils.createElement({
             type: "p",
             textContent: order.status,
-            className:      "container-order-customer-details"
+            className:      "container_orderCustomer-data"
         }));
 
         root.appendChild(utils.createElement({
@@ -94,7 +93,7 @@ let orderDetails = {
             className: "button button-confirm",
             textContent: "Packa Order",
             href: "#",
-            onclick: products.checkProductStock
+            onclick: orders.updateOrder(order.id)
         }));
 
         (function() {
@@ -106,103 +105,103 @@ let orderDetails = {
             container.appendChild(utils.createElement({
                 type: "h3",
                 textContent: "Ordern ",
-                className: "container-order-items-subHeader"
+                className: "container_orderItem-subHeader"
             }));
 
             container.appendChild(utils.createElement({
                 type: "div",
-                id:  "container-order-items",
-                className: "container-order-items"
+                id:  "container_orderItems",
+                className: "container_orderItems"
             }));
 
             var orderItems = order.order_items.map(function(orderItem) {
                 console.info("orderItem -> ", orderItem.name);
 
-                let orderItemsContainer = document.getElementById("container-order-items");
+                let containerOrderItems = document.getElementById("container_orderItems");
 
-                orderItemsContainer.appendChild(utils.createElement({
+                containerOrderItems.appendChild(utils.createElement({
                     type: "p",
                     textContent: "Artikel ",
-                    className:      "container-order-items-labels"
+                    className:      "container_orderItem-label"
                 }));
 
-                orderItemsContainer.appendChild(utils.createElement({
+                containerOrderItems.appendChild(utils.createElement({
                     type: "p",
                     textContent: orderItem.name,
-                    className:      "container-order-items-details"
+                    className:      "container_orderItem-data"
                 }));
 
-                orderItemsContainer.appendChild(utils.createElement({
+                containerOrderItems.appendChild(utils.createElement({
                     type: "p",
                     textContent: "Artikelnr. ",
-                    className:      "container-order-items-labels"
+                    className:      "container_orderItem-label"
                 }));
 
-                orderItemsContainer.appendChild(utils.createElement({
+                containerOrderItems.appendChild(utils.createElement({
                     type: "p",
+                    id:      "orderItem-productId",
                     textContent: orderItem.product_id,
-                    className:      "container-order-items-details",
-                    id:      "orderItem-product_id"
+                    className:      "container_orderItem-data"
                 }));
 
-                orderItemsContainer.appendChild(utils.createElement({
+                containerOrderItems.appendChild(utils.createElement({
                     type: "p",
                     textContent: "Antal ",
-                    className:      "container-order-items-labels"
+                    className:      "container_orderItem-label"
                 }));
 
-                orderItemsContainer.appendChild(utils.createElement({
+                containerOrderItems.appendChild(utils.createElement({
                     type: "p",
                     textContent: orderItem.amount,
-                    className:      "container-order-items-details"
+                    className:      "container_orderItem-data"
                 }));
 
-                orderItemsContainer.appendChild(utils.createElement({
+                containerOrderItems.appendChild(utils.createElement({
                     type: "p",
                     textContent: "Plats ",
-                    className:      "container-order-items-labels"
+                    className:      "container_orderItem-label"
                 }));
 
-                orderItemsContainer.appendChild(utils.createElement({
+                containerOrderItems.appendChild(utils.createElement({
                     type: "p",
                     textContent: orderItem.location,
-                    className:      "container-order-items-details"
+                    className:      "container_orderItem-data"
                 }));
 
-                orderItemsContainer.appendChild(utils.createElement({
+                containerOrderItems.appendChild(utils.createElement({
                     type: "p",
                     textContent: "Styckpris ",
-                    className:      "container-order-items-labels"
+                    className:      "container_orderItem-label"
                 }));
 
-                orderItemsContainer.appendChild(utils.createElement({
+                containerOrderItems.appendChild(utils.createElement({
                     type: "p",
                     textContent: orderItem.price,
-                    className:      "container-order-items-details"
+                    className:      "container_orderItem-data"
                 }));
 
-                orderItemsContainer.appendChild(utils.createElement({
+                containerOrderItems.appendChild(utils.createElement({
                     type: "p",
                     textContent: "Pris ",
-                    className:      "container-order-items-labels"
+                    className:      "container_orderItem-label"
                 }));
 
-                orderItemsContainer.appendChild(utils.createElement({
+                containerOrderItems.appendChild(utils.createElement({
                     type: "p",
                     textContent: orderItem.price * orderItem.amount,
-                    className:      "container-order-items-details"
+                    className:      "container_orderItem-data"
                 }));
 
-                orderItemsContainer.appendChild(utils.createElement({
+                containerOrderItems.appendChild(utils.createElement({
                     type: "hr",
-                    className:      "container-order-items-hr"
+                    className:      "container_orderItem-hr"
                 }));
 
-                var product = document.getElementById("orderItem-product_id");
+                var product = document.getElementById("orderItem-productId");
 
                 product.addEventListener("click", function() {
                     console.info("click!");
-                    return productDetails.showProduct(product.id);
+                    return productDetails.showProduct(orderItem.id);
                 });
             });
 

@@ -29,37 +29,43 @@ var orders = (function() {
             });
     }
 
-    function getOrder(orderId) {
-        // console.info("orders.getAllOrders -> ", orders.getAllOrders);
-        // console.info("orderId ->", orderId);
+    function getOrder(orderItemId) {
+        console.info("orders.allOrders -> ", orders.allOrders);
 
-        return orders.allOrders.filter(function(order) {
-            return order.id == orderId;
+        return orders.allOrders.filter(function(orderItem) {
+            return orderItem.id == orderItemId;
         })[0];
     }
 
     function updateOrder(order_) {
-
-        fetch("PUT...")
-
-        // var orderData = {
-        //     name: order_.name,
-        //     id: order_.id,
-        //     status_is: order_.status_is,
-        //     api_key: apiKey
-        // };
+        fetch(`${baseUrl}orders?api_key=${apiKey}`, {
+            body: JSON.stringify(order_),
+            headers: {
+                'content-type': 'application/json'
+            },
+            method: 'PUT'
+        })
+            .then(function () {
+                order_.order_items.map(function(orderItem) {
+                    if (products.checkProductStock(orderItem.id) >= orderItem.amount) {
+                        console.info("OrderItem amount -> ", orderItem.amount);
+                        // updateProduct(orderItem);
+                    }
+                });
+            });
 
         console.info("apiKey: ", apiKey);
 
-        fetch(`${baseUrl}orders?api_key=${apiKey}`)
-            .then(function() {
-                order_.order_items.map(function(item) {
-                    return products.updateProductStock(item);
-                });
-            });
+        // fetch(`${baseUrl}orders?api_key=${apiKey}`)
+        //     .then(function() {
+        //         order_.order_items.map(function(item) {
+        //             return products.updateProductStock(item);
+        //         });
+        //     });
     }
 
     var publicAPI = {
+        allOrders: allOrders,
         getAllOrders: getAllOrders,
         getOrder: getOrder,
         updateOrder: updateOrder

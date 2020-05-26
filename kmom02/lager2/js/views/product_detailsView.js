@@ -32,7 +32,7 @@ let productDetails = {
         root.appendChild(utils.createElement({
             type:           "div",
             id:      "container",
-            className:      "productElements"
+            className:      "container_productElements"
         }));
 
         let productElements = document.getElementById("container");
@@ -40,89 +40,89 @@ let productDetails = {
         productElements.appendChild(utils.createElement({
             type:           "h1",
             textContent:    product.name,
-            className:      "productElements-header"
+            className:      "container_productItem-header"
         }));
 
         productElements.appendChild(utils.createElement({
             type:           "p",
             textContent:    "ID ",
-            className:      "productElements-label"
+            className:      "container_productItem-label"
         }));
 
         productElements.appendChild(utils.createElement({
             type:           "p",
             textContent:    product.id,
-            className:      "productElements-details"
+            className:      "container_productItem-data"
         }));
 
         productElements.appendChild(utils.createElement({
             type:           "p",
             textContent:    "Artikelnr ",
-            className:     "productElements-label"
+            className:     "container_productItem-label"
         }));
 
         productElements.appendChild(utils.createElement({
             type:           "p",
             textContent:    product.article_number,
-            className:      "productElements-details"
+            className:      "container_productItem-data"
         }));
 
         productElements.appendChild(utils.createElement({
             type:           "p",
             textContent:    "Beskrivning ",
-            className:      "productElements-label"
+            className:      "container_productItem-label"
         }));
 
         productElements.appendChild(utils.createElement({
             type:           "p",
             textContent:    product.description,
-            className:      "productElements-details"
+            className:      "container_productItem-data"
         }));
 
         productElements.appendChild(utils.createElement({
             type: "p",
             textContent: "Specifikationer ",
-            className:      "productElements-label"
+            className:      "container_productItem-label"
         }));
 
         productElements.appendChild(utils.createElement({
             type:           "p",
             textContent:    product.specifiers,
-            className:      "productElements-details"
+            className:      "container_productItem-data"
         }));
 
         productElements.appendChild(utils.createElement({
             type:           "p",
             textContent:    "Saldo ",
-            className:      "productElements-label"
+            className:      "container_productItem-label"
         }));
 
         productElements.appendChild(utils.createElement({
             type:           "p",
             textContent:    product.stock,
-            className:      "productElements-details"
+            className:      "container_productItem-data"
         }));
 
         productElements.appendChild(utils.createElement({
             type:           "p",
             textContent:    "Plats ",
-            className:      "productElements-label"
+            className:      "container_productItem-label"
         }));
         productElements.appendChild(utils.createElement({
             type:           "p",
             textContent:    product.location,
-            className:      "productElements-details"
+            className:      "container_productItem-data"
         }));
 
         productElements.appendChild(utils.createElement({
             type:           "p",
             textContent:    "Pris ",
-            className:      "productElements-label"
+            className:      "container_productItem-label"
         }));
         productElements.appendChild(utils.createElement({
             type:           "p",
             textContent:    product.price,
-            className:      "productElements-details"
+            className:      "container_productItem-data"
         }));
 
         menu.showMenu("info_outline");
