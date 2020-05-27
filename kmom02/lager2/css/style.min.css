@@ -582,18 +582,18 @@ a:hover {
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  color: #0094a8;
-  background-color: #fafafa;
-  border: 0.05rem solid #0094a8;
+  color: #fafafa;
+  background-color: #0094a8;
+  border: 0.05rem solid #FFF;
   border-radius: 0.3rem;
+  box-shadow: inset -0.2rem -0.3rem 0.5rem rgba(0, 0, 0, 0.2), inset 0.05rem 0.1rem 0.3rem rgba(255, 255, 255, 0.75);
   transition-property: color, background-color, box-shadow, transform;
   transition-duration: 0.3s, 0.3s, 0.3s, 0.1s;
   transition-timing-function: ease;
   overflow: hidden;
 }
 .button:hover {
-  color: #fafafa;
-  background-color: #0094a8;
+  background-color: #01b6ce;
   border: 0.05rem solid #FFF;
   box-shadow: inset -0.2rem -0.3rem 0.5rem rgba(0, 0, 0, 0.2), inset 0.05rem 0.1rem 0.3rem rgba(255, 255, 255, 0.75);
 }
@@ -603,12 +603,13 @@ a:hover {
   transform: translateY(0.04rem);
 }
 .button-confirm {
-  color: #4CAF50;
-  border: 0.05rem solid #4CAF50;
+  color: #fafafa;
+  background-color: #4CAF50;
+  border: 0.05rem solid #FFF;
 }
 .button-confirm:hover {
   color: #fafafa;
-  background-color: #4CAF50;
+  background-color: #66BB6A;
   border: 0.05rem solid #FFF;
   box-shadow: inset -0.2rem -0.3rem 0.5rem rgba(0, 0, 0, 0.2), inset 0.05rem 0.1rem 0.3rem rgba(255, 255, 255, 0.75);
 }

@@ -16,18 +16,18 @@
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
-    color: $color_primary;
-    background-color: $color_white;
+    color: $color_white;
+    background-color: $color_primary;
     border: $border;
     border-radius: $border-radius;
+    box-shadow: inset -0.2rem -0.3rem 0.5rem $color_shadow, inset 0.05rem 0.1rem 0.3rem $color_highlight;
     transition-property: color, background-color, box-shadow, transform;
     transition-duration: $transitionTime-hover, $transitionTime-hover, $transitionTime-hover, $transitionTime-active;
     transition-timing-function: ease;
     overflow: hidden;
-
+    
     &:hover {
-        color: $color_white;
-        background-color: $color_primary;
+        background-color: $color_primary-light;
         border: $border-transparent;
         box-shadow: inset -0.2rem -0.3rem 0.5rem $color_shadow, inset 0.05rem 0.1rem 0.3rem $color_highlight;
     }
@@ -39,12 +39,13 @@
     }
 
     &-confirm {
-        color: $color_confirm;
-        border: 0.05rem solid $color_confirm;
+        color: $color_white;
+        background-color: $color_confirm;
+        border: 0.05rem solid $color_bg;
         
         &:hover {
             color: $color_white;
-            background-color: $color_confirm;
+            background-color: $color_confirm-light;
             border: $border-transparent;
             box-shadow: inset -0.2rem -0.3rem 0.5rem $color_shadow, inset 0.05rem 0.1rem 0.3rem $color_highlight;
         }

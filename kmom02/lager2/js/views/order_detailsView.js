@@ -93,7 +93,7 @@ let orderDetails = {
             className: "button button-confirm",
             textContent: "Packa Order",
             href: "#",
-            onclick: orders.updateOrder(order.id)
+            onclick: orders.updateOrder(order)
         }));
 
         (function() {

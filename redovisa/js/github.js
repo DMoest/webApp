@@ -23,18 +23,18 @@ var github = {
 
         window.mainContainer.appendChild(title);
 
-        if(github.allRepos.length === 0)  {
+        if (github.allRepos.length === 0)  {
             fetch("https://api.github.com/users/DMoest/repos")
-            .then(function (response) {
-                return response.json();
-            }).then(function(data) {
-                github.allRepos = data;
-                github.drawRepos();
-            }).catch(function(error) {
-                let errorMessage = "The fetch operation failed due to the following error: ";
+                .then(function (response) {
+                    return response.json();
+                }).then(function(data) {
+                    github.allRepos = data;
+                    github.drawRepos();
+                }).catch(function(error) {
+                    let errorMessage = "The fetch operation failed due to the following error: ";
 
-                console.log(errorMessage, error.message);
-            });
+                    console.log(errorMessage, error.message);
+                });
         } else {
             github.drawRepos();
         }

@@ -10,12 +10,11 @@
 "use strict";
 
 import { baseUrl, apiKey } from "../variables.js";
-import products from "../src/products.js";
 
-var orders = (function() {
-    var allOrders = [];
+var orders = {
+    allOrders: [],
 
-    function getAllOrders(callback) {
+    getAllOrders: function(callback) {
         fetch(`${baseUrl}orders?api_key=${apiKey}`)
             .then(function (result) {
                 return result.json();
@@ -27,51 +26,71 @@ var orders = (function() {
                     callback(result.data);
                 }
             });
-    }
+    },
 
-    function getOrder(orderItemId) {
+    getOrder: function(orderItemId) {
         console.info("orders.allOrders -> ", orders.allOrders);
 
         return orders.allOrders.filter(function(orderItem) {
             return orderItem.id == orderItemId;
         })[0];
-    }
+    },
 
-    function updateOrder(order_) {
+    updateOrder: function(order) {
+        var orderfile = {
+            name:       order.name,
+            id:         order.id,
+            status_id:  200,
+            api_key:     apiKey
+        };
+
+        console.info("apiKey: ", apiKey);
+
         fetch(`${baseUrl}orders?api_key=${apiKey}`, {
-            body: JSON.stringify(order_),
+            body: JSON.stringify(orderfile),
             headers: {
                 'content-type': 'application/json'
             },
             method: 'PUT'
         })
             .then(function () {
-                order_.order_items.map(function(orderItem) {
-                    if (products.checkProductStock(orderItem.id) >= orderItem.amount) {
-                        console.info("OrderItem amount -> ", orderItem.amount);
-                        // updateProduct(orderItem);
+                order.order_items.foreach(function (orderItem) {
+                    console.info("Utanför IF-sats ");
+                    if (orderItem.amount >= orderItem.stock) {
+                        console.info("OrderItem amount INSIDE IF -> ", orderItem.amount);
                     }
                 });
             });
+    },
 
-        console.info("apiKey: ", apiKey);
+    updateProduct: function(orderItem) {
+        var updateProduct = {
+            id: orderItem.product_id,
+            name: orderItem.name,
+            stock: (orderItem.stock - orderItem.amount),
+            api_key: apiKey
+        };
 
-        // fetch(`${baseUrl}orders?api_key=${apiKey}`)
-        //     .then(function() {
-        //         order_.order_items.map(function(item) {
-        //             return products.updateProductStock(item);
-        //         });
-        //     });
-    }
+        fetch(`${baseUrl}products`, {
+            body: JSON.stringify(updateProduct),
+            headers: {
+                'content-type': 'application/json'
+            },
+            method: 'PUT'
+        })
+            .then(function(response) {
+                console.log(response);
+            });
+    },
 
-    var publicAPI = {
-        allOrders: allOrders,
-        getAllOrders: getAllOrders,
-        getOrder: getOrder,
-        updateOrder: updateOrder
-    };
+    // var publicAPI = {
+    //     allOrders: allOrders,
+    //     getAllOrders: getAllOrders,
+    //     getOrder: getOrder,
+    //     updateOrder: updateOrder
+    // }
 
-    return publicAPI;
-})();
+    // return publicAPI;
+};
 
 export default orders;

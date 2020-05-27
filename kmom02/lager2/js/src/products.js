@@ -34,22 +34,6 @@ var products = {
             return product.id == productId;
         })[0];
     },
-
-    // updateProductStock: function(productId) {
-    //     let product = getProduct(productId);
-    //     return console.info(getProduct(item));
-    // },
-
-    // checkProductStock: function(orderId) {
-    //     let order = orders.getOrder(orderId);
-
-    //     array.forEach(orderItem => {
-    //         let product = products.getProduct(productId);
-
-    //         return console.info("product -> ", product.name, "amount -> ", product.amount);
-    //     });
-    // },
-
 };
 
 export default products;

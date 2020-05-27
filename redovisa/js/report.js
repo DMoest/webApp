@@ -34,13 +34,13 @@ var report = {
             window.mainContainer.appendChild(reportElement);
 
             fetch("markdown/" + file)
-            .then(function(response) {
-                return response.text();
-            })
-            .then(function(result) {
-                reportElement.innerHTML = md.render(result);
-            });
-        })
+                .then(function(response) {
+                    return response.text();
+                })
+                .then(function(result) {
+                    reportElement.innerHTML = md.render(result);
+                });
+        });
 
         menu.showMenu("assignment");
     },
